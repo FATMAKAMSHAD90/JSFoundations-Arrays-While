@@ -69,11 +69,9 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
-  if (fruits.length % 2 === 0) {
-    return fruits.slice(length / 2);
-  } else {
-    return [];
-  }
+  if (fruits.length % 2 === 0)
+    return fruits.slice(fruits.length / 2, fruits.length);
+  else return [];
 }
 
 /**
@@ -92,6 +90,10 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  while (shout.indexOf("!!") != -1) {
+    shout = shout.slice(0, -1);
+  }
+  return shout;
 }
 
 module.exports = {
